@@ -1,0 +1,12 @@
+name: phylo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - jupyterlab=0.35.5=py37_0
+  - seaborn==0.9.0
+  - numpy==1.16.3
+  - pandas==0.24.2
+
+prefix: /Users/dustinmichels/miniconda3/envs/phylo
