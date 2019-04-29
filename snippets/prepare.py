@@ -8,8 +8,9 @@ def prepare_snippets(root_dir):
     # load mapping of extensions to language names
     extensions = _load_extensions(root_dir)
 
-    # load list of dirs in root_folder
+    # load list of dirs in root_folder, filter out auto-generated folders
     dirs = [x for x in os.listdir(root_dir) if os.path.isdir(os.path.join(root_dir, x))]
+    dirs = [x for x in dirs if x[0] not in [".", "_"]]
 
     # update data (JSON) files in each code dir
     for d in dirs:
@@ -28,8 +29,9 @@ def _consolidate_code_files(code_dir, extensions):
     """Given a dir with code snippets (in src) consolidate data into single JSON"""
     src_dir = os.path.join(code_dir, "src")
     data_dict = _code_into_dict(src_dir, extensions)
-
     outfile_path = os.path.join(code_dir, "data.json")
+
+    print(f"    {src_dir} => {outfile_path}")
     with open(outfile_path, "w") as f:
         json.dump(data_dict, f, indent=2)
 
@@ -48,6 +50,7 @@ def _code_into_dict(src_dir, extensions):
     return data
 
 
-if __name__ == "main":
-    print("preparing code snippets...")
+if __name__ == "__main__":
+    print("consolidating code snippets into JSON files...")
     prepare_snippets(os.curdir)
+    print("done")
