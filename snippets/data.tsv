@@ -1,0 +1,15 @@
+lang	mult_ints
+C	int multiply(int a, int b) {    return a * b; }
+C++	inline int multiply(int a, int b) {    return a*b; }
+Clojure	(defn multiply [x y]   (* x y))
+CommonLisp	(defun multiply (a b)   (* a b))
+Fortran	FUNCTION MULTINT(X,Y) INTEGER MULTINT, X, Y MULTINT = X * Y END
+Haskell	multiply x y = x * y
+Java	public static int multiply(int a, int b) { return a*b; } 
+Kotlin	fun multiply(a: Int, b: Int): Int {     return a * b }
+Julia	function multiply(a::Number, b::Number)   return a * b end
+JavaScript	function multiply(a, b) {    return a*b;  }
+Ocaml	let int_multiply x y = x * y
+Python	def multiply(a, b):     return a * b
+Ruby	def multiply(a, b)     a * b end
+Rust	fn multiply(a: i32, b: i32) -> i32 {     a * b }
