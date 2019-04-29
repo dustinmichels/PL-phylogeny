@@ -72,5 +72,5 @@ def _data_into_md(data_dict: dict) -> str:
 
 if __name__ == "__main__":
     print("Processing code snippets into consolidated formats...")
-    prepare_snippets(os.curdir)
+    prepare_snippets("snippets")
     print("Done")

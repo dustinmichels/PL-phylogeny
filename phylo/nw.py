@@ -11,10 +11,10 @@ import re
 
 
 def Diagonal(n1, n2, pt):
-    if(n1 == n2):
-        return pt['MATCH']
+    if n1 == n2:
+        return pt["MATCH"]
     else:
-        return pt['MISMATCH']
+        return pt["MISMATCH"]
 
 
 def Pointers(di, ho, ve):
@@ -22,18 +22,18 @@ def Pointers(di, ho, ve):
     # based on python default maximum(return the first element).
     pointer = max(di, ho, ve)
 
-    if(di == pointer):
-        return 'D'
-    elif(ho == pointer):
-        return 'H'
+    if di == pointer:
+        return "D"
+    elif ho == pointer:
+        return "H"
     else:
-        return 'V'
+        return "V"
 
 
 def NW(s1, s2, match=1, mismatch=-1, gap=-1):
 
     # A dictionary for all the penalty valuse.
-    penalty = {'MATCH': match, 'MISMATCH': mismatch, 'GAP': gap}
+    penalty = {"MATCH": match, "MISMATCH": mismatch, "GAP": gap}
 
     n = len(s1) + 1  # The dimension of the matrix columns.
     m = len(s2) + 1  # The dimension of the matrix rows.
@@ -45,13 +45,13 @@ def NW(s1, s2, match=1, mismatch=-1, gap=-1):
 
     # Scans all the first rows element in the matrix and fill it with "gap penalty"
     for i in range(m):
-        al_mat[i][0] = penalty['GAP'] * i
-        p_mat[i][0] = 'V'
+        al_mat[i][0] = penalty["GAP"] * i
+        p_mat[i][0] = "V"
 
     # Scans all the first columns element in the matrix and fill it with "gap penalty"
     for j in range(n):
-        al_mat[0][j] = penalty['GAP'] * j
-        p_mat[0][j] = 'H'
+        al_mat[0][j] = penalty["GAP"] * j
+        p_mat[0][j] = "H"
 
     # Fill the matrix with the correct values.
     # Return the first element of the pointer matrix back to 0.
@@ -59,11 +59,11 @@ def NW(s1, s2, match=1, mismatch=-1, gap=-1):
     for i in range(1, m):
         for j in range(1, n):
             # The value for match/mismatch -  diagonal.
-            di = al_mat[i-1][j-1] + Diagonal(s1[j-1], s2[i-1], penalty)
+            di = al_mat[i - 1][j - 1] + Diagonal(s1[j - 1], s2[i - 1], penalty)
             # The value for gap - horizontal.(from the left cell)
-            ho = al_mat[i][j-1] + penalty['GAP']
+            ho = al_mat[i][j - 1] + penalty["GAP"]
             # The value for gap - vertical.(from the upper cell)
-            ve = al_mat[i-1][j] + penalty['GAP']
+            ve = al_mat[i - 1][j] + penalty["GAP"]
             # Fill the matrix with the maximal value.(based on the python default maximum)
             al_mat[i][j] = max(di, ho, ve)
             p_mat[i][j] = Pointers(di, ho, ve)
@@ -80,19 +80,19 @@ def traceback(letters, s1, s2):
 
 def _traceback_helper(res, row, col, s1, s2, str1, str2):
     cell = res[row, col]
-    if cell == 'D':
-        str1 += s1[col-1]
-        str2 += s2[row-1]
-        return _traceback_helper(res, row-1, col-1, s1, s2, str1, str2)
+    if cell == "D":
+        str1 += s1[col - 1]
+        str2 += s2[row - 1]
+        return _traceback_helper(res, row - 1, col - 1, s1, s2, str1, str2)
     elif cell == "H":
-        str1 += s1[col-1]
+        str1 += s1[col - 1]
         str2 += "-"
-        return _traceback_helper(res, row, col-1, s1, s2, str1, str2)
+        return _traceback_helper(res, row, col - 1, s1, s2, str1, str2)
     elif cell == "V":
         str1 += "-"
-        str2 += s2[row-1]
-        return _traceback_helper(res, row-1, col, s1, s2, str1, str2)
-    elif cell == '0':
+        str2 += s2[row - 1]
+        return _traceback_helper(res, row - 1, col, s1, s2, str1, str2)
+    elif cell == "0":
         return str1[::-1], str2[::-1]
     else:
         print("error!")
@@ -126,11 +126,11 @@ def nw(s1, s2, verbose=True):
 
     if verbose:
         print("\nSTRINGS")
-        print("~"*50)
+        print("~" * 50)
         print(s1)
-        print("~"*50)
+        print("~" * 50)
         print(s2)
-        print("~"*50)
+        print("~" * 50)
 
     print("\n\nALIGNMENT") if verbose else None
     vals, letters = NW(s1, s2)
