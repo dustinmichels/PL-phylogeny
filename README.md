@@ -2,14 +2,25 @@
 
 Phylogenetic tree of programming languages constructed from code snippets
 
-> STATUS: Early, working draft.
+> STATUS: Early! In progress.
 
 ## Setup
 
-Create conda env from file:
+```bash
+# create conda env
+conda env create -f environment.yml
+
+# activate
+conda activate phylo
+
+# install dev dependencies
+pip install -r dev-requirements.txt
+```
+
+Alternatively...
 
 ```bash
-conda env create -f environment.yml
+conda env create -f full_env.yml
 ```
 
 Also helpful:
@@ -19,5 +30,5 @@ Also helpful:
 conda remove --name phylo --all
 
 # export env to file
-conda env export > environment.yml
+conda env export > full_env.yml
 ```

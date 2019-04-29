@@ -8,5 +8,6 @@ dependencies:
   - seaborn==0.9.0
   - numpy==1.16.3
   - pandas==0.24.2
+  - pip
 
 prefix: /Users/dustinmichels/miniconda3/envs/phylo

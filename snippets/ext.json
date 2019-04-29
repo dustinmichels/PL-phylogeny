@@ -1,341 +1,61 @@
-[
-  {
-    "name": "APL",
-    "type": "programming",
-    "extensions": [".apl"]
-  },
-  {
-    "name": "ActionScript",
-    "type": "programming",
-    "extensions": [".as"]
-  },
-  {
-    "name": "Ada",
-    "type": "programming",
-    "extensions": [".adb", ".ada", ".ads"]
-  },
-  {
-    "name": "AppleScript",
-    "type": "programming",
-    "extensions": [".applescript", ".scpt"]
-  },
-  {
-    "name": "Awk",
-    "type": "programming",
-    "extensions": [".awk", ".auk", ".gawk", ".mawk", ".nawk"]
-  },
-  {
-    "name": "C",
-    "type": "programming",
-    "extensions": [".c", ".cats", ".h", ".idc", ".w"]
-  },
-  {
-    "name": "C#",
-    "type": "programming",
-    "extensions": [".cs", ".cake", ".cshtml", ".csx"]
-  },
-  {
-    "name": "C++",
-    "type": "programming",
-    "extensions": [
-      ".cpp",
-      ".c++",
-      ".cc",
-      ".cp",
-      ".cxx",
-      ".h",
-      ".h++",
-      ".hh",
-      ".hpp",
-      ".hxx",
-      ".inc",
-      ".inl",
-      ".ipp",
-      ".tcc",
-      ".tpp"
-    ]
-  },
-  {
-    "name": "Clojure",
-    "type": "programming",
-    "extensions": [
-      ".clj",
-      ".boot",
-      ".cl2",
-      ".cljc",
-      ".cljs",
-      ".cljs.hl",
-      ".cljscm",
-      ".cljx",
-      ".hic"
-    ]
-  },
-  {
-    "name": "CoffeeScript",
-    "type": "programming",
-    "extensions": [".coffee", "._coffee", ".cake", ".cjsx", ".cson", ".iced"]
-  },
-  {
-    "name": "Common Lisp",
-    "type": "programming",
-    "extensions": [
-      ".lisp",
-      ".asd",
-      ".cl",
-      ".l",
-      ".lsp",
-      ".ny",
-      ".podsl",
-      ".sexp"
-    ]
-  },
-  {
-    "name": "Coq",
-    "type": "programming",
-    "extensions": [".coq", ".v"]
-  },
-
-  {
-    "name": "D",
-    "type": "programming",
-    "extensions": [".d", ".di"]
-  },
-  {
-    "name": "Dart",
-    "type": "programming",
-    "extensions": [".dart"]
-  },
-  {
-    "name": "E",
-    "type": "programming",
-    "extensions": [".E"]
-  },
-  {
-    "name": "Elixir",
-    "type": "programming",
-    "extensions": [".ex", ".exs"]
-  },
-  {
-    "name": "Elm",
-    "type": "programming",
-    "extensions": [".elm"]
-  },
-  {
-    "name": "Emacs Lisp",
-    "type": "programming",
-    "extensions": [".el", ".emacs", ".emacs.desktop"]
-  },
-  {
-    "name": "Erlang",
-    "type": "programming",
-    "extensions": [".erl", ".es", ".escript", ".hrl", ".xrl", ".yrl"]
-  },
-  {
-    "name": "F#",
-    "type": "programming",
-    "extensions": [".fs", ".fsi", ".fsx"]
-  },
-  {
-    "name": "FORTRAN",
-    "type": "programming",
-    "extensions": [".f90", ".f", ".f03", ".f08", ".f77", ".f95", ".for", ".fpp"]
-  },
-  {
-    "name": "Go",
-    "type": "programming",
-    "extensions": [".go"]
-  },
-  {
-    "name": "Groovy",
-    "type": "programming",
-    "extensions": [".groovy", ".grt", ".gtpl", ".gvy"]
-  },
-  {
-    "name": "Haskell",
-    "type": "programming",
-    "extensions": [".hs", ".hsc"]
-  },
-  {
-    "name": "Idris",
-    "type": "programming",
-    "extensions": [".idr", ".lidr"]
-  },
-  {
-    "name": "Java",
-    "type": "programming",
-    "extensions": [".java"]
-  },
-  {
-    "name": "JavaScript",
-    "type": "programming",
-    "extensions": [".js"]
-  },
-  {
-    "name": "Julia",
-    "type": "programming",
-    "extensions": [".jl"]
-  },
-  {
-    "name": "Kotlin",
-    "type": "programming",
-    "extensions": [".kt", ".ktm", ".kts"]
-  },
-  {
-    "name": "LiveScript",
-    "type": "programming",
-    "extensions": [".ls", "._ls"]
-  },
-  {
-    "name": "Lua",
-    "type": "programming",
-    "extensions": [".lua", ".fcgi", ".nse", ".pd_lua", ".rbxs", ".wlua"]
-  },
-  {
-    "name": "Mathematica",
-    "type": "programming",
-    "extensions": [".mathematica", ".m", ".ma", ".mt", ".wl", ".wlt"]
-  },
-  {
-    "name": "Matlab",
-    "type": "programming",
-    "extensions": [".matlab", ".m"]
-  },
-  {
-    "name": "OCaml",
-    "type": "programming",
-    "extensions": [".ml", ".eliom", ".eliomi", ".ml4", ".mli", ".mll", ".mly"]
-  },
-  {
-    "name": "Objective-C",
-    "type": "programming",
-    "extensions": [".m", ".h"]
-  },
-  {
-    "name": "PHP",
-    "type": "programming",
-    "extensions": [".php"]
-  },
-  {
-    "name": "Pascal",
-    "type": "programming",
-    "extensions": [".pas", ".dfm", ".dpr", ".inc", ".lpr", ".pp"]
-  },
-  {
-    "name": "Perl",
-    "type": "programming",
-    "extensions": [".pl", ".perl"]
-  },
-  {
-    "name": "Perl6",
-    "type": "programming",
-    "extensions": [
-      ".6pl",
-      ".6pm",
-      ".nqp",
-      ".p6",
-      ".p6l",
-      ".p6m",
-      ".pl",
-      ".pl6",
-      ".pm",
-      ".pm6",
-      ".t"
-    ]
-  },
-  {
-    "name": "PostScript",
-    "type": "markup",
-    "extensions": [".ps", ".eps"]
-  },
-  {
-    "name": "PowerShell",
-    "type": "programming",
-    "extensions": [".ps1", ".psd1", ".psm1"]
-  },
-
-  {
-    "name": "Prolog",
-    "type": "programming",
-    "extensions": [".pl", ".pro", ".prolog", ".yap"]
-  },
-  {
-    "name": "PureBasic",
-    "type": "programming",
-    "extensions": [".pb", ".pbi"]
-  },
-  {
-    "name": "PureScript",
-    "type": "programming",
-    "extensions": [".purs"]
-  },
-  {
-    "name": "Python",
-    "type": "programming",
-    "extensions": [".py"]
-  },
-  {
-    "name": "R",
-    "type": "programming",
-    "extensions": [".r", ".rd", ".rsx"]
-  },
-  {
-    "name": "Racket",
-    "type": "programming",
-    "extensions": [".rkt", ".rktd", ".rktl", ".scrbl"]
-  },
-  {
-    "name": "Ruby",
-    "type": "programming",
-    "extensions": [".rb", ".ruby"]
-  },
-  {
-    "name": "Rust",
-    "type": "programming",
-    "extensions": [".rs", ".rs.in"]
-  },
-  {
-    "name": "Scala",
-    "type": "programming",
-    "extensions": [".scala", ".sbt", ".sc"]
-  },
-  {
-    "name": "Scheme",
-    "type": "programming",
-    "extensions": [".scm", ".sld", ".sls", ".sps", ".ss"]
-  },
-  {
-    "name": "Shell",
-    "type": "programming",
-    "extensions": [".sh", ".bash"]
-  },
-  {
-    "name": "Smalltalk",
-    "type": "programming",
-    "extensions": [".st", ".cs"]
-  },
-  {
-    "name": "Standard ML",
-    "type": "programming",
-    "extensions": [".ML", ".fun", ".sig", ".sml"]
-  },
-  {
-    "name": "Swift",
-    "type": "programming",
-    "extensions": [".swift"]
-  },
-  {
-    "name": "TeX",
-    "type": "markup",
-    "extensions": [".tex"]
-  },
-  {
-    "name": "Visual Basic",
-    "type": "programming",
-    "extensions": [".vb"]
-  },
-  {
-    "name": "Visual Basic Script",
-    "type": "programming",
-    "extensions": [".vbs"]
-  }
-]
+{
+  "apl": "APL",
+  "as": "ActionScript",
+  "ada": "Ada",
+  "applescript": "AppleScript",
+  "awk": "Awk",
+  "c": "C",
+  "cs": "C#",
+  "cpp": "C++",
+  "clj": "Clojure",
+  "coffee": "CoffeeScript",
+  "lisp": "Common Lisp",
+  "coq": "Coq",
+  "d": "D",
+  "dart": "Dart",
+  "E": "E",
+  "ex": "Elixir",
+  "elm": "Elm",
+  "emacs": "Emacs Lisp",
+  "erl": "Erlang",
+  "fs": "F#",
+  "f": "FORTRAN",
+  "go": "Go",
+  "groovy": "Groovy",
+  "hs": "Haskell",
+  "idr": "Idris",
+  "java": "Java",
+  "js": "JavaScript",
+  "jl": "Julia",
+  "kt": "Kotlin",
+  "ls": "LiveScript",
+  "lua": "Lua",
+  "wl": "Mathematica",
+  "matlab": "Matlab",
+  "ml": "OCaml",
+  "m": "Objective-C",
+  "php": "PHP",
+  "pas": "Pascal",
+  "pro": "Prolog",
+  "pl": "Perl",
+  "6pl": "Perl6",
+  "ps": "PostScript",
+  "ps1": "PowerShell",
+  "pb": "PureBasic",
+  "purs": "PureScript",
+  "py": "Python",
+  "r": "R",
+  "rkt": "Racket",
+  "rb": "Ruby",
+  "rs": "Rust",
+  "scala": "Scala",
+  "scm": "Scheme",
+  "sh": "Shell",
+  "st": "Smalltalk",
+  "sml": "Standard ML",
+  "swift": "Swift",
+  "tex": "TeX",
+  "ts": "TypeScript",
+  "vb": "Visual Basic",
+  "vbs": "Visual Basic Script"
+}
