@@ -1,15 +1,15 @@
 """
-Needleman–Wunsch Algorithm
+Needleman–Wunsch Algorithm (pure functions)
 """
 
-from typing import Tuple
 from fractions import Fraction
+from typing import Tuple
 
 import numpy as np
 import pandas as pd
 
 
-def nw(s1: str, s2: str, match_score=1, miss_score=-1, gap_score=-1) -> np.array:
+def nw_algo(s1: str, s2: str, match_score=1, miss_score=-1, gap_score=-1) -> np.array:
     """Implementation of needleman–wunsch algorithm"""
 
     w = len(s1) + 1  # width

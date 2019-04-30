@@ -40,3 +40,7 @@ https://play.bblf.sh/
 coAST
 https://coast.netlify.com/
 https://github.com/coala/coAST
+
+## Language Groupings
+
+https://en.wikipedia.org/wiki/List_of_programming_languages_by_type
