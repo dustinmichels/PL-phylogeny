@@ -6,7 +6,7 @@ Phylogenetic tree of programming languages constructed from code snippets
 
 ## Samples
 
-![Early Tree](notebooks/tree.png)
+![Early Tree](images/tree.png)
 
 _Fig 1._ Tree based on MULT "gene", ie `multiply(a, b) { return a * b}`
 
