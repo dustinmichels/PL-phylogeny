@@ -5,7 +5,7 @@ Needleman–Wunsch Algorithm (class wrapper around pure functions)
 import pandas as pd
 from IPython.display import Latex, Markdown, display
 
-from .functional import (
+from .nw_functional import (
     arr_to_frames,
     arr_to_table,
     identity_score,
