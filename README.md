@@ -1,8 +1,10 @@
-# Phylo-lang
+# Language Phylo
 
 Phylogenetic tree of programming languages constructed from code snippets
 
 > STATUS: Early! In progress.
+
+![Early Tree](notebooks/tree.png)
 
 ## Setup
 
