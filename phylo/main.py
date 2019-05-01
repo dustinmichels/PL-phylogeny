@@ -23,12 +23,22 @@ def load_snippets_md(name="mult"):
     return md
 
 
-def code_to_markdown(lang1: str, lang2: str, data_dict: dict, display=False) -> str:
+# ----- markdown -----
+
+
+def markdownify(code: str, lang: str, show=False) -> str:
+    md = f"**{lang}**\n\n```{lang}\n{code}\n```\n\n----\n\n"
+    if show:
+        display(Markdown(md))
+    return md
+
+
+def code_to_markdown(lang1: str, lang2: str, data_dict: dict, show=False) -> str:
     """Given dict with <lang: code> data, create markdown string repr"""
     md = ""
     for lang in [lang1, lang2]:
         code = data_dict[lang]
         md += f"**{lang}**\n\n```{lang}\n{code}\n```\n\n----\n\n"
-    if display:
+    if show:
         display(Markdown(md))
     return md
