@@ -7,10 +7,13 @@ Phylogenetic tree of programming languages constructed from code snippets
 ## Samples
 
 ![Early Tree](notebooks/tree.png)
-Tree based on MULT "gene", ie `multiply(a, b) { return a * b}`
 
-![Jupyter code](images/notebook.jpeg)
-Jupyter Notebooks examples of aligning "sequences" with needleman-wunsch algorithm and computing similarity score.
+_Fig 1._ Tree based on MULT "gene", ie `multiply(a, b) { return a * b}`
+
+![Jupyter code](images/c_cpp.png)
+![Jupyter code](images/c_py.png)
+
+_Fig 2._ Jupyter Notebooks examples of aligning "sequences" with needleman-wunsch algorithm and computing similarity score.
 
 ## Setup
 
