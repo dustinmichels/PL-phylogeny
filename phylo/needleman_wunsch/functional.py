@@ -9,7 +9,9 @@ import numpy as np
 import pandas as pd
 
 
-def nw_algo(s1: str, s2: str, match_score=1, miss_score=-1, gap_score=-1) -> np.array:
+def nw_algo(
+    s1: str, s2: str, match_penalty=1, miss_penalty=-1, gap_penalty=-1, **kwargs
+):
     """Implementation of needleman–wunsch algorithm"""
 
     w = len(s1) + 1  # width
@@ -31,10 +33,10 @@ def nw_algo(s1: str, s2: str, match_score=1, miss_score=-1, gap_score=-1) -> np.
     for i in range(1, h):
         for j in range(1, w):
             # determine val of horizontal, vertical, and diagnol option
-            hor_val = arr[i, j - 1]["val"] + gap_score
-            vert_val = arr[i - 1, j]["val"] + gap_score
+            hor_val = arr[i, j - 1]["val"] + gap_penalty
+            vert_val = arr[i - 1, j]["val"] + gap_penalty
             diag_val = arr[i - 1, j - 1]["val"] + (
-                match_score if s1[j - 1] == s2[i - 1] else miss_score
+                match_penalty if s1[j - 1] == s2[i - 1] else miss_penalty
             )
             # find max value and its corresponding direction
             # (Note: currently ignores ties)
@@ -77,22 +79,32 @@ def traceback(dir_matrix, s1: str, s2: str) -> Tuple[str, str]:
     return helper(dir_matrix, row_idx, col_idx, "", "")
 
 
-def identity_score(aligned_s1: str, aligned_s2: str) -> Tuple[str, float]:
-    """
-    Get identity score for aligned strings
-    """
-    assert len(aligned_s1) == len(aligned_s2), "Strings must be the same length"
+# ---- Scoring ----
 
+
+def identity_score(aligned_s1: str, aligned_s2: str) -> Tuple[str, float]:
+    """Get identity score for aligned strings"""
+    assert len(aligned_s1) == len(aligned_s2), "Strings must be the same length"
     identity = 0
     length = len(aligned_s1)
-
     for i in range(length):
         if aligned_s1[i] == aligned_s2[i]:
             identity += 1
-
     frac = f"{identity}/{length}"
     percent = identity / length
+    return frac, percent
 
+
+def gap_score(aligned_s1: str, aligned_s2: str) -> Tuple[str, float]:
+    """Get gap score"""
+    assert len(aligned_s1) == len(aligned_s2), "Strings must be the same length"
+    gaps = 0
+    length = len(aligned_s1)
+    for i in range(length):
+        if "-" in [aligned_s1[i], aligned_s2[i]]:
+            gaps += 1
+    frac = f"{gaps}/{length}"
+    percent = gaps / length
     return frac, percent
 
 
@@ -118,3 +130,4 @@ def arr_to_table(arr: np.array, s1: str, s2: str) -> pd.DataFrame:
     vals, dirs = arr_to_frames(arr, s1, s2)
     combined = "[" + dirs + " " + vals.astype(np.unicode_) + "]"  # string concatenation
     return combined
+
