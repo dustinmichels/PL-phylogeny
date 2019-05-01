@@ -65,12 +65,13 @@ def _data_into_md(data_dict: dict) -> str:
     md = ""
     for lang in sorted(data_dict):
         code = data_dict[lang]
-        lang_shortname = lang.split(" ")[-1]  # ie, "common lisp -> lisp"
+        # lang_shortname = lang.split(" ")[-1]  # ie, "common lisp -> lisp"
+        lang_shortname = lang.replace(" ", "")  # remove spaces
         md += f"**{lang_shortname}**\n\n```{lang_shortname}\n{code}\n```\n\n----\n\n"
     return md
 
 
 if __name__ == "__main__":
     print("Processing code snippets into consolidated formats...")
-    prepare_snippets("snippets")
+    prepare_snippets("code_snippets")
     print("Done")

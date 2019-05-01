@@ -95,9 +95,9 @@ multiply = (a, b) -> a * b
 
 ----
 
-**Lisp**
+**CommonLisp**
 
-```Lisp
+```CommonLisp
 (defun multiply (a b)
   (* a b))
 ```
@@ -142,9 +142,9 @@ multiply x y = x*y
 
 ----
 
-**Lisp**
+**EmacsLisp**
 
-```Lisp
+```EmacsLisp
 (defun multiply (x y)
   (* x y))
 ```
@@ -395,9 +395,9 @@ multiply() {
 
 ----
 
-**ML**
+**StandardML**
 
-```ML
+```StandardML
 fun multiply (x, y) = x * y
 ```
 
@@ -423,9 +423,9 @@ function multiply(a: number, b: number): number {
 
 ----
 
-**Basic**
+**VisualBasic**
 
-```Basic
+```VisualBasic
 Function multiply(a As Integer, b As Integer) As Integer
     multiply = a * b
 End Function
@@ -433,9 +433,9 @@ End Function
 
 ----
 
-**Script**
+**VisualBasicScript**
 
-```Script
+```VisualBasicScript
 function multiply( multiplicand, multiplier )
     multiply = multiplicand * multiplier
 end function
